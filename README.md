@@ -6,7 +6,7 @@ A causal mutation conferring phenotypic variation and its tagging variant, detec
 
 ### Description
 
-The AccuTool is a web-based tool used to explore the landscape of association between a single genomic position (or phenotype) and whole genome sequence (WGS)-derived variant positions within a user-defined region of a chromosome. The tool calculates this association based on a panel of 775 genetically-diverse, publicly available resequenced soybean accessions, which have been remapped to the Wm82.a2.v1 Reference genome. This measure of association between the tagging variant and any given WGS variant (a parameter we call "Accuracy") is the percentage of total lines with either the Wild-type (WT) or Mutant (MUT) haplotype at these two positions. Please see "Output fields" below for a brief description of the different Accuracy parameters, or the publication for a more in-depth description.
+The AccuTool is a web-based tool used to explore the landscape of association between a single genomic position (or phenotype) and whole genome sequence (WGS)-derived variant positions within a user-defined region of a chromosome. The tool calculates this association based on a panel of 775 genetically-diverse, publicly available resequenced soybean accessions, which have been remapped to the Wm82.a2.v1 Reference genome. This measure of association between the tagging variant and any given WGS variant (a parameter we call "Accuracy") is the percentage of total lines with either the Wild-type (WT) or Mutant (MUT) haplotype at these two positions. See "Output fields" below for a brief description of the different Accuracy parameters, or the publication for a more in-depth description.
 
 The AccuTool is available at: http://soykb.org/Accuracy. Demo data files and step-by-step instructions are available by clicking on _Example_Data_ above.
 
@@ -37,9 +37,9 @@ __Output fields:__
 * __Avg_Accu_Real:__ mean of the WT_Accu and MUT_Accu values (see WT_Accu and MUT_Accu below for description)
 * __Comb_Accu_Pess:__ percentage of total lines with either WT or MUT haplotypes (any line with missing data is considered recombinant/not a match)
 * __p.value:__ user-supplied p-value (where applicable)
-* __SoySNP50k_ID:__ SNP50k _ss######_ ID number of the position (where applicable)
+* __SoySNP50k_ID:__ SNP50k ID number of the position (where applicable)
 * __Gene:__ Glyma model that the variant impacts (where applicable)
-* __Effect:__ Impact of variant, as determined by SNPEff software
+* __Effect:__ Impact of variant, as predicted by SNPEff software
 * __WT_Accu:__ percentage of WT lines with the correct WT haplotype (or phenotype-genotype association)
 * __Num_of_WT_Lines:__ number of lines with the WT allele of the tagging variant (or WT phenotype)
 * __Missing_Genotype_WT:__ percentage of WT lines with missing genotype data at that position
@@ -50,6 +50,10 @@ __Output fields:__
 * __Multiple_ALT:__ an asterisk indicates that this genomic position has multiple alternate alleles (one allele per table row)
 * __REF:__ genomic sequence of the reference allele
 * __ALT:__ genomic sequence of the alternate allele
+
+### Source Code and Data Curation
+
+The AccuTool was developed using Perl, R, and R Shiny. Variant calling for the Soy775 accession panel was performed using the GATK pipeline and the Wm82.a2.v1 reference genome, and predicted variant effects were obtained using SNPEff.
 
 ### Citation
 
