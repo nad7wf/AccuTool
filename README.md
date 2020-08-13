@@ -6,29 +6,30 @@ A causal mutation conferring phenotypic variation and its tagging variant, detec
 
 ### Description
 
-The AccuTool is a web-based tool used to explore the landscape of association between a single genomic position (or phenotype) and whole genome sequence (WGS)-derived variant positions within a user-defined region of a chromosome. The tool calculates this association based on a panel of 775 genetically-diverse, publicly available resequenced soybean accessions, which have been remapped to the Wm82.a2.v1 Reference genome. This measure of association (a parameter we call "Accuracy") between the tagging variant and any given WGS variant is the percentage of total lines with either the Wild-type (WT) or Mutant (MUT) haplotype at these two positions. Please see "Output fields" below for a brief description of the different Accuracy parameters, or the publication for a more in-depth description.
+The AccuTool is a web-based tool used to explore the landscape of association between a single genomic position (or phenotype) and whole genome sequence (WGS)-derived variant positions within a user-defined region of a chromosome. The tool calculates this association based on a panel of 775 genetically-diverse, publicly available resequenced soybean accessions, which have been remapped to the Wm82.a2.v1 Reference genome. This measure of association between the tagging variant and any given WGS variant (a parameter we call "Accuracy") is the percentage of total lines with either the Wild-type (WT) or Mutant (MUT) haplotype at these two positions. Please see "Output fields" below for a brief description of the different Accuracy parameters, or the publication for a more in-depth description.
 
-The AccuTool is available at: http://soykb.org/Accuracy. Demo data files and step-by-step instructions are available by clicking on _Example_Data_ above. What follows is a description of the web interface and the inputs and outputs of the AccuTool.
+The AccuTool is available at: http://soykb.org/Accuracy. Demo data files and step-by-step instructions are available by clicking on _Example_Data_ above.
 
-The AccuTool has a simple-to-use interface containing two tabs: a "Menu" tab where the user specifies input parameters, and the "Results" tab where the output is displayed. The user does not need to provide any genomic data - all genomic data for the Soy775 accession panel is already contained on the web server.
+### Web Interface
+
+The AccuTool has a simple-to-use interface containing two tabs: a _Menu_ tab where the user specifies input parameters, and the _Results_ tab where the output is displayed. The user does not need to provide any genomic data - all genomic data for the Soy775 accession panel is already contained on the web server.
 
 __Required input:__
 * Chromosome number of the desired genomic interval
 * Start and end coordinates of the genomic interval
 * Specify whether the Reference genome should be considered WT or MUT
-* A _.csv_ file of phenotype assignments for some or all of the Soy775 accession panel (see _Example_Data_ or AccuTool for template)
+* A _.csv_ file of phenotype assignments for some or all of the Soy775 accession panel (see _Example_Data_ or AccuTool for a template)
 <br>_OR_<br>  
 * The chromosome and genomic position of a tagging variant
 
 __Optional input:__
-* A _.csv_ file of p-values derived from the output of GWAS (see _Example_Data_ or AccuTool for template)
+* A _.csv_ file of p-values derived from the output of GWAS (see _Example_Data_ or AccuTool for a template)
 * A range of Accuracy values with which to filter genomic positions
-* A range of p-values with which to filter genomic positions
 * Option to show only those positions with a p-value
-* Option to show only the "high impact" variants (i.e. those variants predicted to cause an amino acid change in a gene product)
+* Option to show only the AA-modifying variants (i.e. those variants predicted to cause an amino acid change in a gene product)
 * Option to show only the SNP50k positions
 
-Once all desired inputs have been provided, click the "Calculate Accuracy" button. This will expand the "Results" tab, where, once processed, a table of the relevant genomic positions and their results will be displayed.
+Once all desired inputs have been provided, click the _Calculate Accuracy_ button. This will expand the _Results_ tab, where, once processed, a table of the relevant genomic positions and their results will be displayed. These results can be downloaded as a tab-delimited file by clicking the _Download Results_ button in the _Menu_ tab.
 
 __Output fields:__
 * __Chr:__ chromosome of genomic position
@@ -49,3 +50,7 @@ __Output fields:__
 * __Multiple_ALT:__ an asterisk indicates that this genomic position has multiple alternate alleles (one allele per table row)
 * __REF:__ genomic sequence of the reference allele
 * __ALT:__ genomic sequence of the alternate allele
+
+### Citation
+
+If you use the AccuTool in your research, please cite:```include paper citation here```
