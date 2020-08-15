@@ -34,7 +34,7 @@ Once all desired inputs have been provided, click the _Calculate Accuracy_ butto
 __Output fields:__
 * __Chr:__ chromosome of genomic position
 * __Pos:__ genomic position
-* __Avg_Accu_Real:__ mean of the WT_Accu and MUT_Accu values (see WT_Accu and MUT_Accu below for description)
+* __Avg_Accuracy:__ mean of the WT_Accu and MUT_Accu values (see WT_Accu and MUT_Accu below for description)
 * __Comb_Accu_Pess:__ percentage of total lines with either WT or MUT haplotypes (any line with missing data is considered recombinant/not a match)
 * __p.value:__ user-supplied p-value (where applicable)
 * __SoySNP50k_ID:__ SNP50k ID number of the position (where applicable)
