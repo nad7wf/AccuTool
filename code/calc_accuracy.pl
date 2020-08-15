@@ -9,7 +9,6 @@ use Scalar::Util qw(looks_like_number);
 
 
 ### Capture script paramenters from input file.
-
 my $geno_file = shift @ARGV;
 my $pheno_geno_file = shift @ARGV;
 my $pheno_file = shift @ARGV;
@@ -18,23 +17,13 @@ my $pos_end = shift @ARGV;
 my $ref_pheno = shift @ARGV;
 my $avg_acc_start = shift @ARGV;
 my $avg_acc_end = shift @ARGV;
-my $avg_acc_pess_start = shift @ARGV;
-my $avg_acc_pess_end = shift @ARGV;
-my $acc_start = shift @ARGV;
-my $acc_end = shift @ARGV;
 my $pess_acc_start = shift @ARGV;
 my $pess_acc_end = shift @ARGV;
 my $wt_acc_start = shift @ARGV;
 my $wt_acc_end = shift @ARGV;
-my $wt_pess_acc_start = shift @ARGV;
-my $wt_pess_acc_end = shift @ARGV;
 my $mut_acc_start = shift @ARGV;
 my $mut_acc_end = shift @ARGV;
-my $mut_pess_acc_start = shift @ARGV;
-my $mut_pess_acc_end = shift @ARGV;
 my $only_p = shift @ARGV;
-my $p_start = shift @ARGV;
-my $p_end = shift @ARGV;
 my $only_mod = shift @ARGV;
 my $only_snp50k = shift @ARGV;
 my $stats_file;
@@ -86,6 +75,12 @@ if ($pheno_file =~ /\.csv/) {
 	chomp(my @pheno_header = split(/\t/, <$geno_handle>));
 	chomp(my @pheno_pos_row = split(/\t/, <$geno_handle>));
 	close $geno_handle;
+	
+	### Check if tagging variant exists in Soy775 file.
+	if (!defined @pheno_pos_row) {
+		print "Tagging variant does not exist in Soy775 accession panel!\n";
+		exit;
+	}
 
 	for (my $ii = 9; $ii < @pheno_pos_row; $ii++) {
 		if ($pheno_pos_row[$ii] =~ /^([\d\.])/) {
@@ -199,11 +194,6 @@ LOOP: while (<$vcf_handle>) {
 	} else {
 		$pval = 'NA';
 	}
-
-	### Skip position if "Show only positions with p-value" is 'yes' and there's no p-value.
-	next if (($only_p eq 'Yes' && $pval eq 'NA') 
-		|| (looks_like_number($pval) && $pval < $p_start) 
-		|| (looks_like_number($pval) && $pval > $p_end));
 
 	my $snp50k_id;
 	if (exists $snp_id_hash{$row[0]}{$row[1]}) {
@@ -380,51 +370,37 @@ LOOP: while (<$vcf_handle>) {
 
 	### Calculate accuracy values.
 	my $wt_acc;
-	my $wt_pess_acc;
 	my $mut_acc;
-	my $mut_pess_acc;
-	my $total_acc;
 	my $total_pess_acc;
 
 	if ($wt_allele_counter == $missing_wt_counter) {
 		$wt_acc = 0;
-		$wt_pess_acc = 0;
 	} else {
 		$wt_acc = sprintf "%.1f", (($wt_acc_counter / ($wt_allele_counter - $missing_wt_counter)) * 100);
-		$wt_pess_acc = sprintf "%.1f", (($wt_acc_counter / $wt_allele_counter) * 100);
 	}
 
 	if ($mut_allele_counter == $missing_mut_counter) {
 		$mut_acc = 0;
-		$mut_pess_acc = 0;
 	} else {
 		$mut_acc = sprintf "%.1f", (($mut_acc_counter / ($mut_allele_counter - $missing_mut_counter)) * 100);
-		$mut_pess_acc = sprintf "%.1f", (($mut_acc_counter / $mut_allele_counter) * 100);
 	}
 
 	if ($total_allele_counter == $total_missing_counter) {
-		$total_acc = 0;
 		$total_pess_acc = 0;
 	} else {
-		$total_acc = sprintf "%.1f", (($total_acc_counter / ($total_allele_counter - $total_missing_counter)) * 100);
 		$total_pess_acc = sprintf "%.1f", (($total_acc_counter / $total_line_counter) * 100);
 	}
 	
 	my $avg_acc = sprintf "%.1f", (($wt_acc + $mut_acc) / 2);
-	my $avg_acc_pess = sprintf "%.1f", (($wt_pess_acc + $mut_pess_acc) / 2);
 	my $missing_pheno_perc = sprintf "%.1f", (($missing_pheno_counter / ($missing_pheno_counter + $total_allele_counter)) * 100);
 	my $missing_wt_perc = sprintf "%.1f", (($missing_wt_counter / $wt_allele_counter) * 100);
 	my $missing_mut_perc = sprintf "%.1f", (($missing_mut_counter / $mut_allele_counter) * 100);
 
 	### If all accuracy calculations are within filter range, print position to output file.
 	if (($avg_acc >= $avg_acc_start && $avg_acc <= $avg_acc_end)
-		&& ($total_acc >= $acc_start && $total_acc <= $acc_end)
 		&& ($wt_acc >= $wt_acc_start && $wt_acc <= $wt_acc_end)
 		&& ($mut_acc >= $mut_acc_start && $mut_acc <= $mut_acc_end)
-		&& ($avg_acc_pess >= $avg_acc_pess_start && $avg_acc_pess <= $avg_acc_pess_end)
-		&& ($total_pess_acc >= $pess_acc_start && $total_pess_acc <= $pess_acc_end)
-		&& ($wt_pess_acc >= $wt_pess_acc_start && $wt_pess_acc <= $wt_pess_acc_end)
-		&& ($mut_pess_acc >= $mut_pess_acc_start && $mut_pess_acc <= $mut_pess_acc_end)) {
+		&& ($total_pess_acc >= $pess_acc_start && $total_pess_acc <= $pess_acc_end)) {
 
 		### Generate final output row.
 		$row[2] =~ s/\./ /;
