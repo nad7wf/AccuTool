@@ -8,7 +8,7 @@ A causal mutation conferring phenotypic variation and its tagging variant, detec
 
 The AccuTool is a web-based tool used to explore the landscape of association between a single genomic position (or phenotype) and whole genome sequence (WGS)-derived variant positions within a user-defined region of a chromosome. The tool calculates this association based on a panel of 775 genetically-diverse, publicly available resequenced soybean accessions, which have been remapped to the Wm82.a2.v1 reference genome. This measure of association between the tagging variant and any given WGS variant (a parameter we call "Accuracy") is the percentage of total lines with either the Wild-type (WT) or Mutant (MUT) haplotype at these two positions. See __Output fields__ below for a brief description of the different Accuracy parameters, or the publication (citation below) for a more in-depth description.
 
-The AccuTool is available at: http://soykb.org/Accuracy. Demo data files and step-by-step instructions are available by clicking on _Example_Data_ above.
+The AccuTool is available at: http://soykb.org/Accuracy. Demo data files and step-by-step instructions are available by clicking on _example_data_ above.
 
 ### Web Interface
 
