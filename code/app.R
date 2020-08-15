@@ -42,7 +42,7 @@ ui <- fluidPage(
                                        ),
                                        column(width = 4, offset = 1,
                                               numericRangeInput("avg_acc_range", 
-                                                                label = "Average accuracy realistic filter:", 
+                                                                label = "Average accuracy filter:", 
                                                                 value = c(0, 100)),
                                               numericRangeInput("acc_pess_range", 
                                                                 label = "Combined accuracy pessimistic filter:", 
@@ -114,7 +114,7 @@ server <- function(input, output, session) {
                  message = "Start of genomic interval must be less than or equal to end."),
             
             need(try(input$avg_acc_range[1] <= input$avg_acc_range[2]),
-                 message = "Average accuracy realistic filter start range must be less than or equal to end."),
+                 message = "Average accuracy filter start range must be less than or equal to end."),
 
             need(try(input$acc_pess_range[1] <= input$acc_pess_range[2]),
                  message = "Combined accuracy pessimistic filter start range must be less than or equal to end."),
@@ -190,7 +190,7 @@ server <- function(input, output, session) {
                  col_names = TRUE,
                  col_types = cols(Chr = "i",
 				  Pos = "i",
-				  `Avg_Accu_Real (%)` = "d",
+				  `Avg_Accuracy (%)` = "d",
                                   `Comb_Accu_Pess (%)` = "d",
 				  `p.value` = "d",
 				  SoySNP50k_ID = "c",

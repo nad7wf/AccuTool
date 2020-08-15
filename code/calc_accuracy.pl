@@ -182,7 +182,7 @@ for (my $ii = 9; $ii < @header; $ii++) {
 }
 
 ### Loop through VCF file, capture SNPEff output, and perform accuracy calculations.
-print join("\t", ('Chr', 'Pos', 'Avg_Accu_Real (%)', 'Comb_Accu_Pess (%)', 'p.value', 'SoySNP50k_ID', 'Gene', 'Effect', 'WT_Accu (%)', 'Num_of_WT_Lines', 'Missing_Genotype_WT (%)', 'MUT_Accu (%)', 'Num_of_MUT_Lines', 'Missing_Genotype_MUT (%)', 'Missing_Phenotype (%)', 'Multiple_ALT', 'REF', 'ALT')), "\n";
+print join("\t", ('Chr', 'Pos', 'Avg_Accuracy (%)', 'Comb_Accu_Pess (%)', 'p.value', 'SoySNP50k_ID', 'Gene', 'Effect', 'WT_Accu (%)', 'Num_of_WT_Lines', 'Missing_Genotype_WT (%)', 'MUT_Accu (%)', 'Num_of_MUT_Lines', 'Missing_Genotype_MUT (%)', 'Missing_Phenotype (%)', 'Multiple_ALT', 'REF', 'ALT')), "\n";
 
 
 LOOP: while (<$vcf_handle>) {
