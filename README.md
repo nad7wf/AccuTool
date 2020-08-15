@@ -26,7 +26,7 @@ __Optional input:__
 * A _.csv_ file of p-values derived from the output of GWAS
 * A range of Accuracy values with which to filter genomic positions
 * Option to return only those positions with a user-supplied p-value
-* Option to return only the AA-modifying variants (i.e. those variants predicted to cause an amino acid change in a gene product)
+* Option to return only the amino acid-modifying variants (i.e. those variants predicted to cause an amino acid change in a gene product)
 * Option to return only the SNP50k positions
 
 Once all desired inputs have been provided, click the _Calculate Accuracy_ button. This will expand the _Results_ tab, where, once processed, a table of the relevant WGS variants and their results will be displayed. These results can be downloaded as a tab-delimited text file by clicking the _Download Results_ button in the _Menu_ tab.
