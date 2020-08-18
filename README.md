@@ -53,7 +53,7 @@ __Output fields:__
 
 ### Software and Data Development
 
-The AccuTool was developed using [Perl](https://www.perl.org/), [R](https://www.r-project.org/about.html), and [R Shiny](https://shiny.rstudio.com/). Variant calling for the Soy775 accession panel was performed using the [GATK](https://gatk.broadinstitute.org/hc/en-us) pipeline and the [Wm82.a2.v1](https://phytozome.jgi.doe.gov/pz/portal.html#!info?alias=Org_Gmax) reference genome, and predicted variant effects were obtained using [SNPEff](https://pcingola.github.io/SnpEff/).
+The AccuTool was developed using [Perl](https://www.perl.org/), [R](https://www.r-project.org/about.html), and [R Shiny](https://shiny.rstudio.com/). Variant calling for the Soy775 accession panel was performed using the [PGen](http://soykb.org/Pegasus/) workflow and the [Wm82.a2.v1](https://phytozome.jgi.doe.gov/pz/portal.html#!info?alias=Org_Gmax) reference genome, and predicted variant effects were obtained using [SNPEff](https://pcingola.github.io/SnpEff/).
 
 ### Citation
 
