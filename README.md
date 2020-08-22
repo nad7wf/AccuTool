@@ -8,7 +8,7 @@ A causal mutation conferring phenotypic variation and its tagging variant, detec
 
 The AccuTool is a web-based tool used to explore the landscape of association between a single genomic position (or phenotype) and whole genome sequence (WGS)-derived variant positions within a user-defined region of a chromosome. The tool calculates this association based on a panel of 775 genetically-diverse, publicly available resequenced soybean accessions, which have been remapped to the Wm82.a2.v1 reference genome. This measure of association between the tagging variant and any given WGS variant (a parameter we call "Accuracy") is the percentage of total lines with either the Wild-type (WT) or Mutant (MUT) haplotype at these two positions. See __Output fields__ below for a brief description of the different Accuracy parameters, or the publication (citation below) for a more in-depth description.
 
-The AccuTool is available at: http://soykb.org/Accuracy. Demo data files and step-by-step instructions are available by clicking on _Example_Data_ above.
+The AccuTool is available at: http://soykb.org/Accuracy. Demo data files and step-by-step instructions are available by clicking on _example_data_ above.
 
 ### Web Interface
 
@@ -34,7 +34,7 @@ Once all desired inputs have been provided, click the _Calculate Accuracy_ butto
 __Output fields:__
 * __Chr:__ chromosome of genomic position
 * __Pos:__ genomic position
-* __Avg_Accu_Real:__ mean of the WT_Accu and MUT_Accu values (see WT_Accu and MUT_Accu below for description)
+* __Avg_Accuracy:__ mean of the WT_Accu and MUT_Accu values (see WT_Accu and MUT_Accu below for description)
 * __Comb_Accu_Pess:__ percentage of total lines with either WT or MUT haplotypes (any line with missing data is considered recombinant/not a match)
 * __p.value:__ user-supplied p-value (where applicable)
 * __SoySNP50k_ID:__ SNP50k ID number of the position (where applicable)
@@ -53,7 +53,7 @@ __Output fields:__
 
 ### Software and Data Development
 
-The AccuTool was developed using [Perl](https://www.perl.org/), [R](https://www.r-project.org/about.html), and [R Shiny](https://shiny.rstudio.com/). Variant calling for the Soy775 accession panel was performed using the [GATK](https://gatk.broadinstitute.org/hc/en-us) pipeline and the [Wm82.a2.v1](https://phytozome.jgi.doe.gov/pz/portal.html#!info?alias=Org_Gmax) reference genome, and predicted variant effects were obtained using [SNPEff](https://pcingola.github.io/SnpEff/).
+The AccuTool was developed using [Perl](https://www.perl.org/), [R](https://www.r-project.org/about.html), and [R Shiny](https://shiny.rstudio.com/). Variant calling for the Soy775 accession panel was performed using the [PGen](http://soykb.org/Pegasus/) workflow and the [Wm82.a2.v1](https://phytozome.jgi.doe.gov/pz/portal.html#!info?alias=Org_Gmax) reference genome, and predicted variant effects were obtained using [SNPEff](https://pcingola.github.io/SnpEff/).
 
 ### Citation
 
