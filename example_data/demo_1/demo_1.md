@@ -38,9 +38,9 @@ You will notice that this file contains all the SNP50k markers for the entire ge
 
 With these input files downloaded, click [here](http://soykb.org/Accuracy) to navigate to the AccuTool.
 
-In the _Menu_ tab, specify the following inputs, leaving all others as the default settings:
+In the _Menu_ tab, specify the following inputs, leaving all others as the default setting:
 ```
-Chromosome: 				1
+Chromosome: 				16
 Genomic interval: 			29680000 to 30100000
 Reference Phenotype: 			MUT
 Choose Phenotype File (.csv): 		Pdh1_phenotype.csv
