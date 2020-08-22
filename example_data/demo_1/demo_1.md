@@ -40,11 +40,11 @@ With these input files downloaded, click [here](http://soykb.org/Accuracy) to na
 
 In the _Menu_ tab, specify the following inputs, leaving all others as the default settings:
 ```
-Chromosome: 1
-Genomic interval: 29680000 to 30100000
-Reference Phenotype: MUT
-Choose Phenotype File (.csv): Pdh1_phenotype.csv
-Choos GWAS Statistics File (.csv): Pdh1_GWAS_statistics.csv
-Return only SNP50k positions: Yes
+Chromosome: 				1
+Genomic interval: 			29680000 to 30100000
+Reference Phenotype: 			MUT
+Choose Phenotype File (.csv): 		Pdh1_phenotype.csv
+Choos GWAS Statistics File (.csv): 	Pdh1_GWAS_statistics.csv
+Return only SNP50k positions: 		Yes
 ```
 Click the _Calculate Accuracy_ button and allow the AccuTool time to process the genomic interval.
