@@ -2,7 +2,7 @@
 
 ### Description
 
-Population structure suppression and variable amounts of missing data can occasionally cause the best Tagging SNP to have a poorer p-value than another associated SNP. This demo shows how the AccuTool can be used to select the Tagging SNP with the strongest association to a real phenotype. To illustrate this, we use phenotype data for early pod shatter downloaded from the Germplasm Resources Information Network (GRIN). By design, the AccuTool does not account for population structure, so this analysis should only be performed on the set of markers contained within a phenotype-associated region identified from a MLM-GWAS. 
+Population structure suppression and variable amounts of missing data can occasionally cause the best Tagging SNP to have a poorer p-value than another associated SNP. This demo shows how the AccuTool can be used to select the Tagging SNP with the strongest association to a real phenotype. To illustrate this, we use phenotype data for early pod shatter downloaded from the Germplasm Resources Information Network (GRIN). By design, the AccuTool does not account for population structure, so this analysis should only be performed on the set of SNPs contained within a phenotype-associated region identified from a MLM-GWAS. 
 
 ### Instructions
 
@@ -39,12 +39,12 @@ You will notice that this file contains all the SNP50k markers for the entire ge
 With these input files downloaded, click [here](http://soykb.org/Accuracy) to navigate to the AccuTool.
 
 In the _Menu_ tab, specify the following inputs, leaving all others as the default settings:
-<br><br>
-__Chromosome:__ 1<br>
-__Genomic interval:__ 29680000 to 30100000<br>
-__Reference Phenotype:__ MUT<br>
-__Choose Phenotype File (.csv):__ Pdh1_phenotype.csv<br>
-__Choos GWAS Statistics File (.csv):__ Pdh1_GWAS_statistics.csv<br>
-__Return only SNP50k positions:__ Yes<br><br>
+<br>
+__Chromosome:__ _1_<br>
+__Genomic interval:__ _29680000_ to _30100000_<br>
+__Reference Phenotype:__ _MUT_<br>
+__Choose Phenotype File (.csv):__ _Pdh1_phenotype.csv_<br>
+__Choos GWAS Statistics File (.csv):__ _Pdh1_GWAS_statistics.csv_<br>
+__Return only SNP50k positions:__ _Yes_<br>
 
 Click the _Calculate Accuracy_ button and allow the AccuTool time to process the genomic interval.
