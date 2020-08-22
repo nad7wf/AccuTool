@@ -39,12 +39,12 @@ You will notice that this file contains all the SNP50k markers for the entire ge
 With these input files downloaded, click [here](http://soykb.org/Accuracy) to navigate to the AccuTool.
 
 In the _Menu_ tab, specify the following inputs, leaving all others as the default settings:
-<br>
-__Chromosome:__ _1_<br>
-__Genomic interval:__ _29680000_ to _30100000_<br>
-__Reference Phenotype:__ _MUT_<br>
-__Choose Phenotype File (.csv):__ _Pdh1_phenotype.csv_<br>
-__Choos GWAS Statistics File (.csv):__ _Pdh1_GWAS_statistics.csv_<br>
-__Return only SNP50k positions:__ _Yes_<br>
-
+```
+Chromosome: 1
+Genomic interval: 29680000 to 30100000
+Reference Phenotype: MUT
+Choose Phenotype File (.csv): Pdh1_phenotype.csv
+Choos GWAS Statistics File (.csv): Pdh1_GWAS_statistics.csv
+Return only SNP50k positions: Yes
+```
 Click the _Calculate Accuracy_ button and allow the AccuTool time to process the genomic interval.
