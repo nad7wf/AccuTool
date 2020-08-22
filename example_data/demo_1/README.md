@@ -6,7 +6,7 @@ Population structure suppression and variable amounts of missing data can occasi
 
 ### Instructions
 
-From the _demo_1_ folder, download and unzip the _demo_1_input_files.zip_ folder. If you open the example phenotype file in Excel, you should see the following format:
+Download and unzip the _demo_1_input_files.zip_ folder. If you open the example phenotype file in Excel, you should see the following format:
 ```
 PI			Pheno
 ZJ-Y314			NA
