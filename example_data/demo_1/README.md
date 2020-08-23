@@ -47,11 +47,18 @@ Choose Phenotype File (.csv): 		Pdh1_phenotype.csv
 Choos GWAS Statistics File (.csv): 	Pdh1_GWAS_statistics.csv
 Return only SNP50k positions: 		Yes
 ```
-Click the _Calculate Accuracy_ button. After processing, you will see a table in the _Results_ tab with 18 columns of information (see [Documentation](http://github.com/nad7wf/AccuTool/README.md#output-fields:) for an explanation of the columns). This table can be sorted according to any column by clicking on the column header, once to sort in ascending order, twice for descending.
-```
+Click the _Calculate Accuracy_ button. After processing, you will see a table in the _Results_ tab with 18 columns of information (see [Documentation](AccuTool/README.md#output-fields:) for an explanation of the columns). This table can be sorted according to any column by clicking on the column header, once to sort in ascending order, twice for descending.
+<!--- ```
 Chr	Pos		Avg_Accuracy (%)	Comb_Accu_Pess (%)	p.value		SoySNP50k_ID
 16	29940504	88.2			20.6			1.21E-07	ss715624199
 16	30009486	87.7			20.6			1.63E-05	ss715624201
 16	30059279	87.2			20.4			2.66E-05	ss715624207
 16	29870849	87			20.1			1.12E-04	ss715624192
+```--->
+```
+Chr	Pos		Avg_Accuracy (%)	Comb_Accu_Pess (%)	p.value		SoySNP50k_ID	Gene		Effect				WT_Accu (%)	Num_of_WT_Lines	Missing_Genotype_WT (%)	MUT_Accu (%)	Num_of_MUT_Lines	Missing_Genotype_MUT (%)	Missing_Phenotype (%)	Multiple_ALT	REF	ALT
+16	29940504	88.2			20.6			1.21E-07	ss715624199	Glyma.16g141300	G|downstream_gene_variant	87.5		8		0			89		176			2.3				76.3					A	G
+16	30009486	87.7	20.6	1.63E-05	ss715624201	Glyma.16g141700	C|downstream_gene_variant	87.5	8	0	87.9	176	1.1	76.3		T	C
+16	30059279	87.2	20.4	2.66E-05	ss715624207	.	G|intergenic_region	87.5	8	0	86.8	176	1.1	76.3		A	G
+16	29870849	87	20.1	1.12E-04	ss715624192	Glyma.16g141000	C|synonymous_variant|R229R	87.5	8	0	86.6	176	2.3	76.3		T	C
 ```
