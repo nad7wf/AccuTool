@@ -2,7 +2,7 @@
 
 ### Description
 
-Population structure suppression and variable amounts of missing data can occasionally cause the best Tagging SNP to have a poorer p-value than another associated SNP. This demo shows how the AccuTool can be used to select the Tagging SNP with the strongest association to a real phenotype. To illustrate this, we use phenotype data for early pod shatter downloaded from the Germplasm Resources Information Network (GRIN). By design, the AccuTool does not account for population structure, so this analysis should only be performed on the set of SNPs contained within a phenotype-associated region identified from a MLM-GWAS. 
+This demo shows how the AccuTool can be used to select the Tagging SNP with the strongest association to a real phenotype. To illustrate this, we use phenotype data for early pod shatter downloaded from the Germplasm Resources Information Network (GRIN). By design, the AccuTool does not account for population structure, so this analysis should only be performed on the set of SNPs contained within a phenotype-associated region identified from a MLM-GWAS. 
 
 ### Instructions
 
@@ -38,7 +38,7 @@ You will notice that this file contains all the SNP50k markers for the entire ge
 
 With these input files downloaded, click [here](http://soykb.org/Accuracy) to navigate to the AccuTool.
 
-In the _Menu_ tab, specify the following inputs, leaving all others as the default setting:
+In the _Menu_ tab, specify the following inputs, leaving all others as default:
 ```
 Chromosome: 				16
 Genomic interval: 			29680000 to 30100000
@@ -47,4 +47,11 @@ Choose Phenotype File (.csv): 		Pdh1_phenotype.csv
 Choos GWAS Statistics File (.csv): 	Pdh1_GWAS_statistics.csv
 Return only SNP50k positions: 		Yes
 ```
-Click the _Calculate Accuracy_ button and allow the AccuTool time to process the genomic interval.
+Click the _Calculate Accuracy_ button. After processing, you will see a table in the _Results_ tab with 18 columns of information (see [Documentation](http://github.com/nad7wf/AccuTool/README.md#output-fields:) for an explanation of the columns). This table can be sorted according to any column by clicking on the column header, once to sort in ascending order, twice for descending.
+```
+Chr	Pos		Avg_Accuracy (%)	Comb_Accu_Pess (%)	p.value		SoySNP50k_ID
+16	29940504	88.2			20.6			1.21E-07	ss715624199
+16	30009486	87.7			20.6			1.63E-05	ss715624201
+16	30059279	87.2			20.4			2.66E-05	ss715624207
+16	29870849	87			20.1			1.12E-04	ss715624192
+```
