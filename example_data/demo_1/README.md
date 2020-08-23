@@ -1,10 +1,10 @@
 # Demo 1
 
-### Description
+## Description
 
 This demo shows how the AccuTool can be used to select the Tagging SNP with the strongest association to a real phenotype. To illustrate this, we use phenotype data for early pod shatter downloaded from the Germplasm Resources Information Network (GRIN). By design, the AccuTool does not account for population structure, so this analysis should only be performed on the set of SNPs contained within a phenotype-associated region identified from a MLM-GWAS. 
 
-### Instructions
+## Instructions
 
 Download and unzip the _demo_1_input_files.zip_ folder. If you open the example phenotype file in Excel, you should see the following format:
 ```
