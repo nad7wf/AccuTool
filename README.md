@@ -31,7 +31,7 @@ __Optional input__
 
 Once all desired inputs have been provided, click the _Calculate Accuracy_ button. This will expand the _Results_ tab, where, once processed, a table of the relevant WGS variants and their results will be displayed. These results can be downloaded as a tab-delimited text file by clicking the _Download Results_ button in the _Menu_ tab.
 
-__Output fields__
+####Output fields
 * __Chr:__ chromosome of genomic position
 * __Pos:__ genomic position
 * __Avg_Accuracy:__ mean of the WT_Accu and MUT_Accu values (see WT_Accu and MUT_Accu below for description)
