@@ -14,7 +14,7 @@ The AccuTool is available at: http://soykb.org/Accuracy. Demo data files and ste
 
 The AccuTool has a simple-to-use interface containing two tabs: a _Menu_ tab where the user specifies input parameters, and the _Results_ tab where the output is displayed. The user does not need to provide any genomic data - all genomic data for the Soy775 accession panel is already contained on the web server.
 
-__Required input:__
+__Required input__
 * Chromosome number of the desired genomic interval
 * Start and end coordinates of the genomic interval
 * Specify whether the reference genome should be considered WT or MUT
@@ -22,7 +22,7 @@ __Required input:__
 <br>_OR_<br>  
 * The chromosome and genomic position of a tagging variant
 
-__Optional input:__
+__Optional input__
 * A _.csv_ file of p-values derived from the output of GWAS
 * A range of Accuracy values with which to filter genomic positions
 * Option to return only those positions with a user-supplied p-value
@@ -31,7 +31,7 @@ __Optional input:__
 
 Once all desired inputs have been provided, click the _Calculate Accuracy_ button. This will expand the _Results_ tab, where, once processed, a table of the relevant WGS variants and their results will be displayed. These results can be downloaded as a tab-delimited text file by clicking the _Download Results_ button in the _Menu_ tab.
 
-__Output fields:__
+__Output fields__
 * __Chr:__ chromosome of genomic position
 * __Pos:__ genomic position
 * __Avg_Accuracy:__ mean of the WT_Accu and MUT_Accu values (see WT_Accu and MUT_Accu below for description)
