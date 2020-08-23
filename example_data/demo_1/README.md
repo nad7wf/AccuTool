@@ -43,11 +43,11 @@ In the _Menu_ tab, specify the following inputs, leaving all others as default:
 Chromosome: 				16
 Genomic interval: 			29680000 to 30100000
 Reference Phenotype: 			MUT
-Choose Phenotype File (.csv): 		Pdh1_phenotype.csv
-Choos GWAS Statistics File (.csv): 	Pdh1_GWAS_statistics.csv
+Choose Phenotype File (.csv): 		Early_pod_shatter_phenotype.csv
+Choose GWAS Statistics File (.csv): 	Early_pod_shatter_GWAS_statistics.csv
 Return only SNP50k positions: 		Yes
 ```
-Click the _Calculate Accuracy_ button. After processing, you will see a table in the _Results_ tab with 18 columns of information (see [Documentation](../../README.md#-output-fields) for an explanation of the columns). This table can be sorted according to any column by clicking on the column header, once to sort in ascending order, twice for descending. Double-clicking the _Avg_Accuracy_ column header will sort the table by descending accuracy values and place the best Tagging SNP for early pod shatter (ss715624199) at the top.
+Click the _Calculate Accuracy_ button. After processing, you will see a table in the _Results_ tab with 18 columns of information (see [Documentation](../../README.md#output-fields) for a description of the information contained in each column). This table can be sorted according to any column by clicking on the column header, once to sort in ascending order, twice for descending. Double-clicking the _Avg_Accuracy_ column header will sort the table by descending accuracy values and place the best Tagging SNP for early pod shatter (ss715624199) at the top.
 ```
 Chr	Pos		Avg_Accuracy (%)	Comb_Accu_Pess (%)	p.value		SoySNP50k_ID	Gene		Effect				WT_Accu (%)	Num_of_WT_Lines	Missing_Genotype_WT (%)	MUT_Accu (%)	Num_of_MUT_Lines	Missing_Genotype_MUT (%)	Missing_Phenotype (%)	Multiple_ALT	REF	ALT
 16	29940504	88.2			20.6			1.21E-07	ss715624199	Glyma.16g141300	G|downstream_gene_variant	87.5		8		0			89		176			2.3				76.3					A	G
