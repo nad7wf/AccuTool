@@ -53,7 +53,7 @@ Once all desired inputs have been provided, click the _Calculate Accuracy_ butto
 
 ## Software and Data Development
 
-The AccuTool was developed using [Perl](https://www.perl.org/), [R](https://www.r-project.org/about.html), and [R Shiny](https://shiny.rstudio.com/). Variant calling for the Soy775 accession panel was performed using the [PGen](http://soykb.org/Pegasus/) workflow and the [Wm82.a2.v1](https://phytozome.jgi.doe.gov/pz/portal.html#!info?alias=Org_Gmax) reference genome, and predicted variant effects were obtained using [SNPEff](https://pcingola.github.io/SnpEff/). VCF data for the full Soy775 accession panel can be downloaded by [clicking here](https://de.cyverse.org/dl/d/BA00FC63-C844-4FD3-BDF9-581EB11642A2/Soy775.vcf.gz).
+The AccuTool was developed using [Perl](https://www.perl.org/), [R](https://www.r-project.org/about.html), and [R Shiny](https://shiny.rstudio.com/). Variant calling for the Soy775 accession panel was performed using the [PGen](http://soykb.org/Pegasus/) workflow and the [Wm82.a2.v1](https://phytozome.jgi.doe.gov/pz/portal.html#!info?alias=Org_Gmax) reference genome, and predicted variant effects were obtained using [SNPEff](https://pcingola.github.io/SnpEff/). VCF data for the full Soy775 accession panel can be downloaded by clicking [here](https://de.cyverse.org/dl/d/BA00FC63-C844-4FD3-BDF9-581EB11642A2/Soy775.vcf.gz).
 
 ## Citation
 
