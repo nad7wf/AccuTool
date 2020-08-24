@@ -37,7 +37,7 @@ Chr	Pos		Avg_Accuracy (%)	Comb_Accu_Pess (%)	p.value		SoySNP50k_ID	Gene		Effect	
 13	18046553	92			82.3			0.02716		ss715616090	Glyma.13g076400	C|intron_variant		88.4		468		2.6			95.5		257			4.3				6.5					A	C
 13	18327972	92			84.1			0.54678		ss715615785	Glyma.13g077600	A|downstream_gene_variant	89.6		468		1.1			94.4		257			2.3				6.5					G	A
 ```
-Sorting the same results table instead by the GWAS-derived p.value column reveals that in fact the SNP50k marker with the best p.value (ss715616654) has poor accuracy values. In this case, using the GWAS-derived tagging SNP to identify accessions containing the causal mutation would result in poorer selection accuracy than using the proxy SNP with the highest accuracy value.
+Sorting the same results table instead by the GWAS-derived _p.value_ column reveals that in fact the SNP50k marker with the best p.value (ss715616654) has poor accuracy values. In this case, using the GWAS-derived tagging SNP to identify accessions containing the causal mutation would result in poorer selection accuracy than using the proxy SNP with the highest accuracy value.
 ```
 Chr	Pos		Avg_Accuracy (%)	Comb_Accu_Pess (%)	p.value		SoySNP50k_ID	Gene		Effect				WT_Accu (%)	Num_of_WT_Lines	Missing_Genotype_WT (%)	MUT_Accu (%)	Num_of_MUT_Lines	Missing_Genotype_MUT (%)	Missing_Phenotype (%)	Multiple_ALT	REF	ALT
 13	17316431	67.2			53.3			1.34E-22	ss715616654	Glyma.13g072100	A|synonymous_variant|P353P	34.4		468		1.3			100		257			1.2				6.5					C	A
