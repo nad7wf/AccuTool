@@ -7,9 +7,11 @@ library(tidyverse)
 
 setwd("/var/www/html/Dev/nad7wf/")
 
-
+### Define UI logic.
 ui <- fluidPage(
         bsCollapse(id = "panels", open = "Menu",
+		   
+		   ### Define objects for user input in the Menu tab.
                    bsCollapsePanel("Menu", 
                                    fluidRow(
                                        column(width = 4, 
@@ -27,8 +29,10 @@ ui <- fluidPage(
                                               fileInput("pheno_file", 
                                                         label = "Choose Phenotype File (.csv):", 
                                                         accept = ".csv"),
-					      p("OR use a tagging variant as a phenotype:"),
+					      a(href="Phenotype_template.csv", "Download Phenotype file template", download=NA, target="_blank"),
 					      br(),
+					      br(),
+					      p("OR use a variant position (Tagging variant) as a synthetic phenotype:"),
 					      selectInput("tagging_chr",
                                                           label = "Chromosome of tagging variant:",
                                                           choices = seq(1, 20),
@@ -38,7 +42,8 @@ ui <- fluidPage(
                                                         value = ""),
                                               fileInput("stats_file", 
                                                         label = "Choose GWAS Statistics File (.csv):", 
-                                                        accept = ".csv")
+                                                        accept = ".csv"),
+					      a(href="GWAS_statistics_template.csv", "Download GWAS statistics file template", download=NA, target="_blank"),
                                        ),
                                        column(width = 4, offset = 1,
                                               numericRangeInput("avg_acc_range", 
@@ -53,6 +58,8 @@ ui <- fluidPage(
                                               numericRangeInput("mut_acc_range", 
                                                                 label = "Mut accuracy filter:", 
                                                                 value = c(0, 100)),
+					      br(),
+					      br(),
 					      br(),
 					      br(),
                                               radioButtons("only_p", 
@@ -77,6 +84,8 @@ ui <- fluidPage(
                                        )
                                    )
                    ),
+
+		   ### Render table of results.
                    bsCollapsePanel("Results",
                                    fluidRow(
                                        column(width = 12,
@@ -88,7 +97,7 @@ ui <- fluidPage(
         )
 )
 
-
+### Define server logic.
 server <- function(input, output, session) {
     
     ### Increase allowable input file size.
