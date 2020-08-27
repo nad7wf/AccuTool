@@ -15,7 +15,7 @@ Chr	Pos		P-val
 13	16500747	0.66666
 13	16500844	0.96345
 ```
-With this input file downloaded, click [here](http://soykb.org/Accuracy) to navigate to the AccuTool.
+With this input file downloaded, click [here](http://soykb.org/AccuTool) to navigate to the AccuTool.
 
 In the _Menu_ tab, specify the following inputs, leaving all others as default:
 ```
